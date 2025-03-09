@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#preview {
+    margin-top: 20px;
+}
+
+#image-preview, #video-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#camera-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-preview {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.input-group {
+    margin-top: 20px;
+}
+
+.camera-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}

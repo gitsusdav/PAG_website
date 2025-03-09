@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Vehículos para Peajes</title>
+    <!-- Usar el CDN de Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Tus estilos personalizados -->
+</head>
+<body>
+    <main class="container">
+        <h1>Clasificador de Vehículos para Peajes</h1>
+        <p>Selecciona una opción para clasificar el vehícul:</p>
+
+        <!-- Combobox para elegir entre subir imagen o usar cámara -->
+        <select id="mode-select" class="button">
+            <option value="upload">Subir Imagen</option>
+            <option value="camera">Usar Cámara</option>
+        </select>
+
+        <!-- Contenedor para subir imagen -->
+        <div id="upload-container" class="input-group">
+            <input type="file" id="upload" accept="image/*" hidden>
+            <button><label for="upload" class="button">Seleccionar Imagen</label></button>
+        </div>
+
+        <!-- Contenedor para la cámara -->
+        <div id="camera-container" class="camera-center" style="display: none;">
+            <video id="video-preview" autoplay></video>
+            <button id="capture" class="button">Capturar Imagen</button>
+        </div>
+
+        <!-- Vista previa de la imagen -->
+        <img id="preview" src="#" alt="Vista previa de la imagen" style="display:none;">
+
+        <!-- Resultado de la clasificación -->
+        <div id="result" class="result-box">
+            <h2>Resultado:</h2>
+            <p id="prediction-text">Esperando imagen...</p>
+        </div>
+    </main>
+
+    <!-- Cargar TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Cargar tu archivo JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
